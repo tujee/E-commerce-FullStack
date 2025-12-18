@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, Typography, CardMedia } from '@mui/material';
 
 function Feed(props) {
-
+    
     return (
         <div style={style.feed}>
             <Card sx={{ maxWidth: 345 }}>

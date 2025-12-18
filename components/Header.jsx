@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppBar, Container, Divider, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Container, Divider, IconButton, Toolbar, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Header (props) {
     return (
@@ -9,6 +10,22 @@ function Header (props) {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Tienda Online Mateo
                     </Typography>
+                    <Box sx={{flexGrow: 1, display : {xs : "none", md: "flex"}}}>
+                        <Link to='/'>
+                            <Button 
+                                variant="contained" 
+                                sx={{ my: 2, color: 'white', display: 'block' }}>
+                                Home
+                            </Button>
+                        </Link>
+                        <Link to='/faq'>
+                            <Button 
+                                variant="contained" 
+                                sx={{ my: 2, color: 'white', display: 'block', marginLeft: 2 }}>
+                                FAQ
+                            </Button>   
+                        </Link>
+                    </Box>
                     <IconButton color='inherit' arial-label='Admin Access'>
                         <Typography variant="body1" sx={{ pr: 1}} >
                             Acceso Admin
